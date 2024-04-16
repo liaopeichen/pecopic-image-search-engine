@@ -1,11 +1,13 @@
-export default function SearchInput({ onSearch }) {
-  const searchURL =
-    "https://api.pexels.com/v1/search?query=nature&page=1&per_page=15";
+export default function SearchInput({ onSearch, setInput }) {
+  const inputHandler = function (event) {
+    setInput(event.target.value);
+    () => setInput("");
+  };
 
   return (
     <div className="search">
-      <input className="input" type="text" />
-      <button onClick={() => onSearch(searchURL)}>Search</button>
+      <input className="input" type="text" onChange={inputHandler} />
+      <button onClick={onSearch}>Search</button>
     </div>
   );
 }

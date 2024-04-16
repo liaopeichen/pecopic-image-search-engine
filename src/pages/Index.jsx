@@ -4,8 +4,10 @@ import SearchInput from "../components/SearchInput";
 import Image from "../components/Image";
 
 export default function Index() {
+  const [searchInput, setSearchInput] = useState("");
   const [photos, setPhotos] = useState(null);
   const initialURL = "https://api.pexels.com/v1/curated?per_page=1&per_page=15";
+  let searchURL = `https://api.pexels.com/v1/search?query=${searchInput}&locale=zh-TW&locale=en-US&page=1&per_page=15`;
 
   const search = async function (url) {
     let result = await axios.get(url, {
@@ -21,7 +23,10 @@ export default function Index() {
 
   return (
     <div style={{ minHeight: "100vh" }}>
-      <SearchInput onSearch={search} />
+      <SearchInput
+        onSearch={() => search(searchURL)}
+        setInput={setSearchInput}
+      />
       <div className="images">
         {photos &&
           photos.map((photo) => {
