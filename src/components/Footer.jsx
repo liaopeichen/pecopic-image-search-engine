@@ -4,9 +4,9 @@ export default function Footer() {
       <div>
         <p>
           PecoPic &copy;
-          {new Date().getFullYear()} Created by{" "}
+          {new Date().getFullYear()} Created by
           <b>
-            <i>liaopeichen </i>
+            <i> liaopeichen </i>
           </b>
           <a
             href="https://github.com/liaopeichen"
