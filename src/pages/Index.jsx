@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import SearchInput from "../components/SearchInput";
 import Image from "../components/Image";
+import BackToTopButton from "../components/BackToTopButton";
 
 export default function Index() {
   const [page, setPage] = useState(1);
@@ -58,6 +59,7 @@ export default function Index() {
       <div className="moreImages">
         <button onClick={moreImagesHandler}>更多圖片</button>
       </div>
+      <BackToTopButton />
     </div>
   );
 }

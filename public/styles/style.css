@@ -41,7 +41,7 @@ ul {
 .search input,
 .search button {
   font-size: 2rem;
-  padding: 0.25rem;
+  padding: 0.5rem;
   border-radius: 5rem 0 0 5rem;
   border: 3px solid black;
 }
@@ -50,6 +50,9 @@ ul {
   border: 3px solid black;
   border-left: none;
   background-color: beige;
+}
+.search button:hover {
+  cursor: pointer;
 }
 
 .images {
@@ -167,4 +170,41 @@ ul {
   to {
     transform: translateY(0rem) scale(1);
   }
+}
+#back-to-top {
+  display: inline-block;
+  background-color: #141e46;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 19vh;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#back-to-top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: white;
+}
+#back-to-top:hover {
+  cursor: pointer;
+  background-color: #41b06e;
+}
+#back-to-top:active {
+  background-color: #8decb4;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */
