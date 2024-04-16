@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import Index from "./components/Index";
-import PageNotFound from "./components/PageNotFound";
+import Layout from "./pages/Layout";
+import Index from "./pages/Index";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
