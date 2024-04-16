@@ -22,12 +22,14 @@ export default function Index() {
 
   const moreImagesHandler = async function () {
     let newURL;
-    setPage((currentPage) => currentPage + 1);
+    setPage(page + 1);
 
     if (currentSearch === "") {
-      newURL = `https://api.pexels.com/v1/curated?page=${page}&per_page=15`;
+      newURL = `https://api.pexels.com/v1/curated?page=${page + 1}&per_page=15`;
     } else {
-      newURL = `https://api.pexels.com/v1/search?query=${currentSearch}&locale=zh-TW&locale=en-US&page=${page}&per_page=15`;
+      newURL = `https://api.pexels.com/v1/search?query=${currentSearch}&locale=zh-TW&locale=en-US&page=${
+        page + 1
+      }&per_page=15`;
     }
 
     let result = await axios.get(newURL, {

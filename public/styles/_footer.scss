@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  background-color: beige;
+  min-height: 10vh;
+
+  div {
+    p {
+      b {
+        i {
+          font-family: sans-serif;
+          font-size: 13px;
+          font-style: italic;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+.fa-github {
+  font-size: 1.35rem;
+
+  &:hover {
+    animation: github-animation-in 0.5s ease infinite alternate;
+  }
+
+  &:not(:hover) {
+    animation: github-animation-out 0.5s ease-out;
+  }
+}
+
+@keyframes github-animation-in {
+  from {
+    transform: translateY(0rem) scale(1.2);
+  }
+  to {
+    transform: translateY(-0.3rem) scale(1.2);
+  }
+}
+
+@keyframes github-animation-out {
+  from {
+    transform: translateY(0rem) scale(1.2);
+  }
+  to {
+    transform: translateY(0rem) scale(1);
+  }
+}
