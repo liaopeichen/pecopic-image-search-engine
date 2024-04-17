@@ -55,6 +55,18 @@ ul {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .search input,
+  .search button {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .search input,
+  .search button {
+    font-size: 1.2rem;
+  }
+}
 .images {
   display: flex;
   flex-wrap: wrap;
